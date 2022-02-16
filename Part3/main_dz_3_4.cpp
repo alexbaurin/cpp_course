@@ -35,6 +35,13 @@ int main() {
     int oneCycleHeight = (growth - losses);
     int resultDays = (growHeight) / oneCycleHeight;
     std::cout << "Дней для сбора урожая - " << resultDays;
+	
+	// ADD
+	// В таком случае результат будет не всегда верный. Лучше использовать вариант с IF.
+	// Но из разбора этой задачи в лекции понял что результат можно увеличить на единицу.
+	
+	resultDays += 1; // or resultDays++;
+	std::cout << "Дней для сбора урожая (гарантированно) - " << resultDays;
 
 
 }

@@ -25,7 +25,7 @@ int main() {
 
     // Сколько нужно барберов, чтобы постричь mansCount человек?
     int requiredBarbersCount = mansCount / mansPerBarberPerMonth;
-    if (mansCount / mansPerBarberPerMonth > 0) {
+    if (mansCount % mansPerBarberPerMonth > 0) {
         requiredBarbersCount += 1;
     }
 
