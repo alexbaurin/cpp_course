@@ -20,7 +20,7 @@ int main() {
 
     // part 2
 
-    int growBound = 300; // sm or 3 meters(m)
+    int growBound = 301; // sm or 3 meters(m)
 
     std::cout << "Введите начальную высоту саженца: ";
     std::cin >> startHeight;
@@ -31,17 +31,7 @@ int main() {
     std::cout << "Введите высоту для сбора урожая: ";
     std::cin >> growBound;
 
-    int growHeight = growBound - startHeight;
-    int oneCycleHeight = (growth - losses);
-    int resultDays = (growHeight) / oneCycleHeight;
+    int resultDays = (growBound - startHeight - growth) / (growth - losses) + 1;
+
     std::cout << "Дней для сбора урожая - " << resultDays;
-	
-	// ADD
-	// В таком случае результат будет не всегда верный. Лучше использовать вариант с IF.
-	// Но из разбора этой задачи в лекции понял что результат можно увеличить на единицу.
-	
-	resultDays += 1; // or resultDays++;
-	std::cout << "Дней для сбора урожая (гарантированно) - " << resultDays;
-
-
 }
