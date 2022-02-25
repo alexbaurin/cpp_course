@@ -19,7 +19,7 @@ int main() {
 
     if (divisionResult == 1 ) {
         wordVariant = " рубль";
-    } else if (divisionResult > 1  && divisionResult < 5) {
+    } else if (divisionResult > 1  && divisionResult < 5 && (productCost / 10) % 10 != 1) {
         wordVariant = " рубля";
     } else {
         wordVariant = " рублей";
