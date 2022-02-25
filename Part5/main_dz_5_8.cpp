@@ -21,7 +21,7 @@ int main() {
     yearsDiff = currentYear - year;
     monthDiff = currentMonth - month;
     daysDiff = currentDay - day;
-    if (yearsDiff > 18 || yearsDiff == 18 && monthDiff >= 0 && daysDiff > 0 ) {
+    if (yearsDiff > 18 || yearsDiff == 18 && (monthDiff > 0 || (monthDiff==0 && daysDiff > 0) ) ) {
         std::cout << "Вам уже можно продавть алкоголь! ";
     } else {
         std::cout << "Вам еще нельзя продавть алкоголь! ";
